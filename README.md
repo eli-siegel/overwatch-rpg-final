@@ -5,4 +5,4 @@ I chose Overwatch because I am a huge nerd, and also because there are a ton of 
 
 This Assignment was created for UC Berkeley Coding Bootcamp, using Javascript, jQuery, HTML, and CSS.  The game needs to be more fun, but I'm happy with the general functionality.  Perhaps adding a primary and secondary attack for each character, or maybe some animations on the attack function, or maybe even just some randomized component to make the attacks less predictable.  
 
-[Play the game here!](index.html)
+[Play the game here!](https://eli-siegel.github.io/overwatch-rpg-final/)
