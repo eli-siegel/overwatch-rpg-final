@@ -60,10 +60,10 @@ $(document).ready(function() {
 	gameStart = false;
     var enemiesRemaining = heroes.length - 1;
     
-    
+    //calls playerselect function to, which calls enemy select function after
     playerSelect();
 
-
+    //after playerselect and enemyselect have finished, gameStart = true and startbattle is called
     startBattle();
 
     //Enables reset button to reset the game whenever clicked
@@ -264,14 +264,14 @@ $(document).ready(function() {
 
     
 
-    //attack function for user
+    //attack function for user, called during startbattle
     function attack(){
 		opponent.health = opponent.health - player.attackPower;
         $("#opponent-total-hp").text(opponent.health);
         increaseAttackPower();
     }
     
-    //counterattack function for opponents
+    //counterattack function for opponents, called during startbattle
     function counterAttack(){
 		player.health = player.health - opponent.counterAttackPower;
 		$("#player-total-hp").text(player.health);
@@ -304,21 +304,19 @@ $(document).ready(function() {
         }
     }
 
-    //win function, changes selector text to say you won and restarts game after 10 secs
+    //win function, changes selector text to say you won
     function gameWin() {
         $("#opponent-total-hp").text(0);
         console.log("you win")
         $("#selector-text").text("You Won!")
 		gameStart = false;
-		setTimeout(gameReset, 10000);
     }
     
-    //lose funciton, changes screen to say You lose and will restart the game automativally in 10 secs
+    //lose funciton, changes screen to say You lose
     function gameLose() {
 		$("#player-total-hp").text(0);
 		gameStart = false;
-        $("#selector-text").text("You Lose!")
-        setTimeout(gameReset, 10000);
+        $("#selector-text").text("You Lose!");
     }
 
     //Reset function, resets original places and values
